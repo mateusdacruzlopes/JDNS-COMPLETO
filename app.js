@@ -7,15 +7,11 @@ function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
     
-    let fala = new SpeechSynthesisUtterance(texto);
-    fala.lang = "pt-BR";
-    fala.rate = 1.2;
-    speechSynthesis.speak(fala);
 }
 
 function exibirMensagemInicial() {
     exibirTextoNaTela('h1', 'jogo do numero secreto');
-    exibirTextoNaTela('p', 'escolha um numero entre 1 e 10');
+    exibirTextoNaTela('p', 'escolha um numero entre 1 e 100');
 }
 
 exibirMensagemInicial();
